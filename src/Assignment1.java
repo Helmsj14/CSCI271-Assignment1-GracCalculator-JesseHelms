@@ -1,16 +1,49 @@
+/*************************************************************************
+* Assignment 1 for CSCI 271-001 Spring 2026
+*
+* Author: Jesse Helms
+* OS: Windows 11
+* Compiler: javac 25.0.1
+* Date: February 1st, 2026
+*
+* Purpose
+* This program asks for the grades of a student including 7 assignment grades, seven test grades,
+* midterm grade, and final exam grade. Then it calculates the final grade based on the weights of each component
+* 
+*
+*************************************************************************/
+/*******************************************************************
+* I declare and confirm the following:
+* - I have not discussed this program code with anyone other than my
+* instructor or the teaching assistants assigned to this course.
+* - I have not used programming code obtained from someone else,
+* or any unauthorised sources, including the Internet, either
+* modified or unmodified.
+* - If any source code or documentation used in my program was
+* obtained from other sources, like a text book or course notes,
+* I have clearly indicated that with a proper citation in the
+* comments of my program.
+* - I have not designed this program in such a way as to defeat or
+* interfere with the normal operation of the supplied grading code.
+*
+* Jesse Helms
+* W30671685
+********************************************************************/
+
+
 import java.util.Scanner;
 public class Assignment1 {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);//scanner object created to take user input
 
         // variable declarations
-    int FinalExamgrade=0;
-    int Midtermgrade=0;
-    int Assignmentgrade=0;
-    int testgrade=0;
-    int AssignmentTotal=0;
-    int TestAverage=0;
-    int AAverage=0;
+    int FinalExamgrade=0;           // variable to hold final exam grade
+    int Midtermgrade=0;             // variable to hold midterm grade
+    int Assignmentgrade=0;          // variable to hold assignment grade
+    int testgrade=0;                // variable to hold test grade
+    int AssignmentTotal=0;          // variable to hold total assignment grades
+    int TestAverage=0;              // variable to hold average of test grades
+    int AAverage=0;                 // variable to hold average of assignment grades
     //loop to take 7 assignment grades from user
     for(int i=0;i<7;i++){
         System.out.printf("Please enter your 7 assignment grades between 0 and 100: ");
@@ -61,7 +94,7 @@ public class Assignment1 {
         System.out.println("Please enter your Final grade between 0-100: ");
 
         FinalExamgrade = input.nextInt();
-        
+
         if(FinalExamgrade < 0 || FinalExamgrade > 100){
             System.out.println("Invalid grade entered, please enter a grade between 0 and 100.");
             } // validate final exam grade input is between 0-100
