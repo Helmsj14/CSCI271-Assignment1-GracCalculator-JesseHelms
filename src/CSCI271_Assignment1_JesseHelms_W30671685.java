@@ -125,4 +125,3 @@ public class CSCI271_Assignment1_JesseHelms_W30671685 {
     System.out.printf("Your final grade is: %.2f", FinalGrade);
 }
 }
-
