@@ -32,7 +32,7 @@
 
 
 import java.util.Scanner;
-public class Assignment1 {
+public class CSCI271_Assignment1_JesseHelms_W30671685 {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);//scanner object created to take user input
 
@@ -103,24 +103,26 @@ public class Assignment1 {
             }// validate final exam grade input is a whole number
 
     input.close();
-    double E = ((0.4 * FinalExamgrade) + (0.2 * Midtermgrade) + (0.1 * TestAverage))/70.0; // declaration and calculate E
+    double E = (((0.4 * FinalExamgrade) + (0.2 * Midtermgrade) + (0.1 * TestAverage))/70.0)*100; // declaration and calculate E
     double W = ((E-60)/20)*0.3;     // declaration and calculate W
 
+    System.out.println("E value is: " + E);
     double FinalGrade =0;
     //calculate final grade based on conditions
-    if(E<60){
+    if(E<60){ // E less than 60
         FinalGrade=E;
     }
-    else if(E>=60 && E< 80){
+    else if(E>=60 && E< 80){  // E between 60 and 80
         FinalGrade=(1-W)*E +(W*AAverage);
     }
-    else if(E>=80){
+    else if(E>=80){      // E greater than or equal to 80
         FinalGrade=(0.4*FinalExamgrade)+(0.2*Midtermgrade)+(0.1*TestAverage)+(0.3*AAverage);
         
     }
     // multiply final grade by 100 to convert to percentage out of 100
-    FinalGrade=FinalGrade*100;
+    
     // output final grade in two decimal places format
     System.out.printf("Your final grade is: %.2f", FinalGrade);
 }
 }
+
